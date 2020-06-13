@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import {TabsModule} from 'ngx-bootstrap/tabs';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
-import {NgxGalleryModule} from '@kolkov/ngx-gallery';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeagoModule } from 'ngx-timeago';
 
@@ -63,7 +65,9 @@ export function tokenGetter() {
     TabsModule.forRoot(),
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
+    ButtonsModule.forRoot(),
     NgxGalleryModule,
+    PaginationModule.forRoot(),
     FileUploadModule,
     BsDatepickerModule.forRoot(),
     TimeagoModule.forRoot(),
@@ -85,7 +89,7 @@ export function tokenGetter() {
     MemberListResolver,
     MemberEditResolver,
     PreventUnsavedChanges
-],
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
